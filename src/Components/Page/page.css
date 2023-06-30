@@ -1,0 +1,17 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 1rem;
+    gap:8rem;
+}
+
+
+.return{
+    width: 100%;
+    color: blue;
+    text-align: center;
+    padding: 1rem;
+}
