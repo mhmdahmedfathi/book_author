@@ -18,6 +18,7 @@ export default function Home(){
 
     return(
         loading ? <Spinner/>:
+        <>
         <div className="dashboard"> 
             {books && books.map((book,index)=>(
                 <div key={index} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -44,5 +45,13 @@ export default function Home(){
                 </div>
                 ))}
             </div>
+            {
+                books.length === 0 &&
+                <div className="flex justify-center items-center h-screen">
+                    <h1 className="text-3xl font-bold text-gray-700 dark:text-gray-200">No Books</h1>
+                </div>
+                
+            }
+            </>
     )
 }

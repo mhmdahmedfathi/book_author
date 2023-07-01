@@ -1,6 +1,4 @@
 import AxiosConfiged from "./axiosConfig";
-import { useContext } from "react";
-import { AuthContext } from "./StateManagment/AuthContext";
 
 class Helpers {
     async login(user)  {
@@ -11,6 +9,7 @@ class Helpers {
             const res = await AxiosConfiged.post("/reader/login", user)
             if(res.status === 200){
                 localStorage.setItem("token", res.data.token);
+                AxiosConfiged.defaults.headers.common["Authorization"] = `bearer ${localStorage.getItem("token")}`;
                 return res;
             }
             return false;
@@ -25,6 +24,7 @@ class Helpers {
             const res = await AxiosConfiged.post("/author/login", user)
             if(res.status === 200){
                 localStorage.setItem("token", res.data.token);
+                AxiosConfiged.defaults.headers.common["Authorization"] = `bearer ${localStorage.getItem("token")}`;
                 return res;
             }
             return false;
@@ -45,6 +45,7 @@ class Helpers {
             const res = await AxiosConfiged.post("/reader/signup", user)
             if(res.status === 201){
                 localStorage.setItem("token", res.data.token);
+                AxiosConfiged.defaults.headers.common["Authorization"] = `bearer ${localStorage.getItem("token")}`;
                 return res;
             }
             return false;
@@ -59,6 +60,7 @@ class Helpers {
             const res = await AxiosConfiged.post("/author/signup", user)
             if(res.status === 201){
                 localStorage.setItem("token", res.data.token);
+                AxiosConfiged.defaults.headers.common["Authorization"] = `bearer ${localStorage.getItem("token")}`;
                 let response = {
                     status: res.status,
                     data: res.data
@@ -76,14 +78,17 @@ class Helpers {
     async Me() {
         try {
             const res = await AxiosConfiged.get("/user/me")
-            console.log(res);
             if(res.status === 200){
                 return res.data;
             }
             return false;
         } catch (error) {
             let error_msg = JSON.parse(error.request.response);
-            return error_msg;
+            let response = {
+                status: error.response.status,
+                data: error_msg
+            }
+            return response;
         }
     }
 

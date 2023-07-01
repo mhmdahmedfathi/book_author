@@ -19,6 +19,9 @@ export default function Navbar() {
   useEffect(() => {
     const getData = async () => {
       const res = await helpers.Me();
+      if (res.status === 401) {
+        navigate("/login");
+      }
       login(res);
     };
     if (localStorage.getItem("token") && !isAuth) {
@@ -58,7 +61,11 @@ export default function Navbar() {
               <>
                 <button
                   type="button"
-                  onClick={logout}
+                  onClick={()=>
+                  {
+                    logout(); 
+                    navigate("/login");
+                  }}
                   className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   log out
