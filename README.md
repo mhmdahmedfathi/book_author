@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# book author app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This is a simple app to manage authors and their books, using the following technologies:
 
-In the project directory, you can run:
+- [React](https://reactjs.org/)
+- [React-Router](https://reacttraining.com/react-router/)
+- [Tailwind](https://tailwindcss.com/docs/guides/create-react-app)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone
+```
 
-### `npm test`
+2. Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+3. Run the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[MIT](https://choosealicense.com/licenses/mit/)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Description
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This is a simple app to manage authors and their books, readers can read the books
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This app using CRUD operations to manage authors and books
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+when you open the app, you will find the home page,
 
-## Learn More
+if there is no books, you will find 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width=100% src="screenshots/1.png" alt="logo">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+if there is books, you will find
 
-### Code Splitting
+<img width=100% src="screenshots/2.png" alt="logo">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+** note that you can add book with a cover image or no, as you want, as we will add default image if you didn't add a cover image
 
-### Analyzing the Bundle Size
+if you click on the book, you will find the book details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width=100% src="screenshots/3.png" alt="logo">
 
-### Making a Progressive Web App
+** note that you can edit the book details or delete it if you are the author of the book
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+if you click on edit on title
 
-### Advanced Configuration
+<img width=100% src="screenshots/4.png" alt="logo">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+if you click on edit on description
 
-### Deployment
+<img width=100% src="screenshots/5.png" alt="logo">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+if you click on save changes 
 
-### `npm run build` fails to minify
+<img width=100% src="screenshots/6.png" alt="logo">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+if you click on delete book
+
+<img width=100% src="screenshots/7.png" alt="logo">
+
+if you click on add book
+
+<img width=100% src="screenshots/9.png" alt="logo">
+
+if you click on add book with cover image
+
+<img width=100% src="screenshots/8.png" alt="logo">
+
+if you want to sign up
+
+<img width=100% src="screenshots/10.png" alt="logo">
+
+** note that you have to choose between author or reader nad you have to fill all the fields
+
+
+Dashboard contains the Books you added
+
+<img width=100% src="screenshots/11.png" alt="logo">
+
+if you are the author of the book, you can add a page to a book
+
+if you click on add page
+
+<img width=100% src="screenshots/12.png" alt="logo">
+
+if the book contains pages, you will find new button to redirect you to the book pages
+
+<img width=100% src="screenshots/13.png" alt="logo">
+
+if you are in the first page, you will find only next button
+and if you are in the last page, you will find only previous button
+else you will find both of them
+
+<img width=100% src="screenshots/14.png" alt="logo">
+
+If you try to edit the title of the page
+
+<img width=100% src="screenshots/15.png" alt="logo">
+
+
+after you click on save changes
+
+<img width=100% src="screenshots/16.png" alt="logo">
+
+if you click on delete page
+
+<img width=100% src="screenshots/17.png" alt="logo">
+
+** note that if you are not the author of the book, you will not find the edit and delete buttons or add pages button
+
