@@ -55,7 +55,7 @@ export default function Addpage(){
                 <div className="text-red-500">{error}</div>
 
             <div className="-space-y-px">
-            <label for="helper-text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+            <label htmlFor="helper-text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
             <input onChange={(e)=>setTitle(e.target.value)} type="text" id="helper-text" aria-describedby="helper-text-explanation" className="bg-gray-50 border 
             border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  
             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 
