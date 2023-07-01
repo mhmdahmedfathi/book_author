@@ -96,7 +96,12 @@ class BookHelpers {
 
     async Dashboard() {
         try {
-            const res = await AxiosConfiged.get("/book/dashboard")
+            const res = await AxiosConfiged.get("/book/dashboard",{
+                headers: {
+                    'Authorization': `bearer ${localStorage.getItem("token")}`
+                }
+            })
+
             if(res.status === 200){
                 let response = {
                     status: res.status,

@@ -2,10 +2,10 @@ import AxiosConfiged from "./axiosConfig";
 
 class Helpers {
     async login(user)  {
+        if (user.role === "author") {
+            return await this.login_Author(user);
+        }
         try {
-            if (user.role === "author") {
-                return await this.login_Author(user);
-            }
             const res = await AxiosConfiged.post("/reader/login", user)
             if(res.status === 200){
                 localStorage.setItem("token", res.data.token);
